@@ -1,27 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Konversi Suhu - Cornel</title>
-
+    <title>Konversi Suhu - Cornel</title>
     <!-- CSS External -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Header Content -->
     <header>
-
+        <h1>Kalkulator Konversi Suhu</h1>
     </header>
 
     <!-- Main Content -->
     <main>
+        <section class="intro">
+            <p>Masukkan suhu derajat Celsius (°C) ke kotak dibawah, lalu klik tombol Konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (°F).</p>
+        </section>
 
+        <!-- Form Input & Result -->
+        <section class="converter">
+            <form id="temperature-form">
+                <label for="celsius-input" id="input-label">Celsius (°C):</label>
+                <textarea id="celsius-input" required></textarea>
+
+                <div class="buttons">
+                    <button type="submit">Konversi</button>
+                    <button type="button" id="reset">Reset</button>
+                    <button type="button" id="reverse">Reverse</button>
+                </div>
+
+                <label for="fahrenheit-output" id="output-label">Fahrenheit (°F):</label>
+                <textarea id="fahrenheit-output" readonly></textarea>
+
+                <label for="calculation">Cara Kalkulasi:</label>
+                <textarea id="calculation" readonly></textarea>
+            </form>
+        </section>
+
+        <!-- Informasi Cara Konversi -->
+        <section class="info">
+            <a href="#">Fahrenheit ke Celsius</a>
+            <h2 id="info-title">Cara Konversi Dari Celsius (°C) ke Fahrenheit (°F)</h2>
+            <p id="info-formula">Suhu <em>S</em> dalam derajat Fahrenheit (°F) sama dengan suhu <em>S</em> dalam derajat Celsius (°C) kali <strong>9/5</strong> tambah <strong>32</strong>.</p>
+            <p id="info-equation"><strong>S(°F) = (S(°C) × 9/5) + 32</strong></p>
+            <p>atau</p>
+            <p><strong>S(°F) = (S(°C) × 1.8) + 32</strong></p>
+        </section>
     </main>
 
     <!-- Footer Content -->
     <footer>
-
+        <p>&copy; 2025 Cornelius Henry Wibowo | Kalkulator Suhu</p>
     </footer>
+
+    <!-- Javascript External -->
+    <script src="js/script.js"></script>
 </body>
 </html>
